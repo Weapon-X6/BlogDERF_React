@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-//import {* as serviceWorker} from "./service-worker";
+//import * as serviceWorker from "./serviceWorker";
 import "./index.css";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import App from "./App";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -13,7 +13,7 @@ const routing = (
       <Header />
       <hr />
       <Switch>
-        <Router exact path="/" component={App} />
+        <Route exact path="/" component={App} />
       </Switch>
       <hr />
       <Footer />
