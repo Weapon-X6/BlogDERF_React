@@ -1,12 +1,16 @@
 import React from "react";
-import "./App.css";
+//import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">Lernen</header>
-    </div>
-  );
+class App extends React.Component {
+  componentDidMount() {
+    const apiUrl = "http://127.0.0.1:8000/api/1";
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
+  render() {
+    return <div>Beispiel</div>;
+  }
 }
 
 export default App;
